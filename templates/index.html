@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>Smart File Converter</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}" />
+</head>
+
+<body>
+  <!-- Hero Section -->
+  <div class="hero text-center py-5">
+    <img src="https://cdn-icons-png.flaticon.com/512/861/861060.png" width="72" class="mb-3" />
+    <h1 class="app-title">Smart File Converter</h1>
+    <p class="app-tagline">
+      Convert Word, Excel & more — beautifully simple 💜
+    </p>
+  </div>
+
+  <!-- Form Card -->
+  <div class="container">
+    <div class="converter-card mx-auto p-4">
+      <form action="/convert" method="post" enctype="multipart/form-data">
+        <h3 class="text-center mb-4 text-accent">Upload & Convert</h3>
+
+        <div class="mb-3">
+          <label class="form-label">📁 Choose File</label>
+          <input type="file" class="form-control form-control-lg" name="file" required />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label">🎯 Select Conversion</label>
+          <select class="form-select form-select-lg" name="conversion_type" required>
+           
+            <optgroup label="Word Conversions">
+              <option value="word-pdf">Word to PDF</option>
+              <option value="word-txt">Word to TXT</option>
+              <option value="word-html">Word to HTML</option>
+              <option value="word-odt">Word to ODT</option>
+              <option value="word-rtf">Word to RTF</option>
+              <option value="word-epub">Word to EPUB</option>
+            </optgroup>
+
+            <optgroup label="Excel Conversions">
+              <option value="excel-pdf">Excel to PDF</option>
+              <option value="excel-csv">Excel to CSV</option>
+              <option value="excel-txt">Excel to TXT</option>
+              <option value="excel-ods">Excel to ODS</option>
+            </optgroup>
+
+            <optgroup label="PowerPoint Conversions">
+              <option value="ppt-pdf">PowerPoint to PDF</option>
+              <option value="ppt-odp">PowerPoint to ODP</option>
+              <option value="ppt-image">PowerPoint to JPG/PNG</option>
+            </optgroup>
+
+            <optgroup label="PDF Conversions">
+              <option value="pdf-docx">PDF to Word (.docx)</option>
+              <option value="pdf-txt">PDF to Text (.txt)</option>
+              <option value="pdf-img">PDF to Image (.png)</option>
+            </optgroup>
+          </select>
+        </div>
+
+        <button type="submit" class="btn btn-convert w-100 mt-3">
+          🚀 Convert Now
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="text-center mt-5 text-muted small">
+    Made with 💜 by Tahreem | © 2025 FileConverterApp
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

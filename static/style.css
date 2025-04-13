@@ -1,0 +1,56 @@
+body {
+  background: linear-gradient(145deg, #e6f0ff, #f4e9ff);
+  font-family: 'Outfit', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.hero {
+  color: #3d3d3d;
+}
+
+.app-title {
+  font-size: 2.4rem;
+  font-weight: 600;
+}
+
+.app-tagline {
+  color: #666;
+  font-size: 1rem;
+  margin-top: 0.5rem;
+}
+
+.converter-card {
+  max-width: 600px;
+  background: #ffffffdd;
+  border-radius: 18px;
+  box-shadow: 0 8px 25px rgba(139, 92, 246, 0.1);
+  backdrop-filter: blur(6px);
+  border: 1px solid #ebe7ff;
+}
+
+.text-accent {
+  color: #6f42c1;
+  font-weight: 600;
+}
+
+.btn-convert {
+  background: linear-gradient(to right, #6f42c1, #00b4d8);
+  color: white;
+  font-weight: 600;
+  padding: 12px;
+  border: none;
+  border-radius: 12px;
+  transition: 0.3s ease;
+  font-size: 1.1rem;
+}
+
+.btn-convert:hover {
+  opacity: 0.9;
+  transform: scale(1.02);
+  box-shadow: 0 0 12px rgba(111, 66, 193, 0.3);
+}
+
+footer {
+  color: #888;
+}

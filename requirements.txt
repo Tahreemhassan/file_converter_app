@@ -1,0 +1,5 @@
+Flask
+pypandoc
+pandas
+openpyxl
+xlrd
